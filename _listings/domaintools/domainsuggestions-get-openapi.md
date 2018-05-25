@@ -26,7 +26,7 @@ paths:
       parameters:
       - in: query
         name: query
-        description: "Query string \u2014 must be at least two characters long"
+        description: Query string  must be at least two characters long
         type: string
         format: string
       responses:

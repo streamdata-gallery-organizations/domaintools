@@ -32,8 +32,8 @@ paths:
         format: string
       - in: query
         name: page
-        description: "\tIf the result set is larger than 1000 records for a given
-          day, request additional pages with this parameter"
+        description: If the result set is larger than 1000 records for a given day,
+          request additional pages with this parameter
         type: string
         format: string
       - in: query

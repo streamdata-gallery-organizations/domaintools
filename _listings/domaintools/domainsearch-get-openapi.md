@@ -34,7 +34,7 @@ paths:
         format: string
       - in: query
         name: anchor_right
-        description: "\tReturn only domains that end with the query term"
+        description: Return only domains that end with the query term
         type: string
         format: string
       - in: query
@@ -44,8 +44,8 @@ paths:
         format: string
       - in: query
         name: exclude_query
-        description: "Terms to exclude from matching \u2014 each term in the query
-          string must be at least three characters long"
+        description: Terms to exclude from matching  each term in the query string
+          must be at least three characters long
         type: string
         format: string
       - in: query
@@ -70,13 +70,13 @@ paths:
         format: string
       - in: query
         name: page
-        description: "\tSets the page of results to retrieve from the server"
+        description: Sets the page of results to retrieve from the server
         type: string
         format: string
       - in: query
         name: query
-        description: "Query string \u2014 each term in the query string must be at
-          least three characters long"
+        description: Query string  each term in the query string must be at least
+          three characters long
         type: string
         format: string
       responses:

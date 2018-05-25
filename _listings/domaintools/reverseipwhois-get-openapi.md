@@ -43,8 +43,8 @@ paths:
         format: string
       - in: query
         name: page
-        description: "\tProviding the page number allows access to additional pages
-          of data"
+        description: Providing the page number allows access to additional pages of
+          data
         type: string
         format: string
       - in: query

@@ -39,8 +39,8 @@ paths:
         format: string
       - in: query
         name: scope
-        description: "\tSets the scope of the report to include only current Whois
-          records, or to include both current and historic records"
+        description: Sets the scope of the report to include only current Whois records,
+          or to include both current and historic records
         type: string
         format: string
       - in: query

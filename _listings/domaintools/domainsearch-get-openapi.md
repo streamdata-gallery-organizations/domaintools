@@ -15,6 +15,58 @@ produces:
 consumes:
 - application/json
 paths:
+  /mark-alert/:
+    get:
+      summary: Brand Monitor
+      description: Monitor new domains registrations for specific keywords
+      operationId: brandMonitor
+      x-api-path-slug: markalert-get
+      parameters:
+      - in: query
+        name: days_back
+        description: Use this parameter in exceptional circumstances where you need
+          to search domains registered up to six days prior to the current date
+        type: string
+        format: string
+      - in: query
+        name: domain_status
+        description: Sets the scope of domain names to search
+        type: string
+        format: string
+      - in: query
+        name: exclude
+        description: Domain names with these words will be excluded from the result
+          set
+        type: string
+        format: string
+      - in: query
+        name: query
+        description: One or more terms separated by the pipe character ( | )
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Brand Monitor
+  /{domain}:
+    get:
+      summary: Domain Profile
+      description: Basic registrant, server, and registration data for a domain name,
+        plus preview data for other products
+      operationId: domainProfile
+      x-api-path-slug: domain-get
+      parameters:
+      - in: path
+        name: domain
+        description: The domain to profile
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Domains
   /domain-search/:
     get:
       summary: Domain Search
@@ -44,7 +96,7 @@ paths:
         format: string
       - in: query
         name: exclude_query
-        description: Terms to exclude from matching  each term in the query string
+        description: Terms to exclude from matching ??? each term in the query string
           must be at least three characters long
         type: string
         format: string
@@ -75,7 +127,7 @@ paths:
         format: string
       - in: query
         name: query
-        description: Query string  each term in the query string must be at least
+        description: Query string ??? each term in the query string must be at least
           three characters long
         type: string
         format: string
